@@ -19,10 +19,10 @@ int check(string s){
 
 int main(){
 	cin.tie(nullptr)->sync_with_stdio(false);
-	#ifndef ONLINE_JUDGE
-	freopen("TASK.inp","r",stdin);
-	freopen("TASK.out","w",stdout);
-	#endif
+	// #ifndef ONLINE_JUDGE
+	// freopen("TASK.inp","r",stdin);
+	// freopen("TASK.out","w",stdout);
+	// #endif
 	int n;
 	cin >> n;
 	while(n--){

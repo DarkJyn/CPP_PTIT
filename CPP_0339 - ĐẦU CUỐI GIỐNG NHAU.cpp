@@ -4,23 +4,26 @@ using namespace std;
 
 using ll = long long;
 
-#define MOD 1000000007
+#define MOD 998244353
 #define endl "\n"
 
-int main(){
+signed main(){
 	cin.tie(nullptr)->sync_with_stdio(false);
 	// #ifndef ONLINE_JUDGE
 	// freopen("TASK.inp","r",stdin);
 	// freopen("TASK.out","w",stdout);
 	// #endif
-	int n;
-	cin >> n;
-	cin.ignore();
-	map<string,int> mp;
-	while(n--){
+	int t;
+	cin >> t;
+	while(t--){
 		string s;
-		getline(cin,s);
-		mp[s]++;
+		cin >> s;
+		ll cnt = 0;
+		for(int i = 0;i < s.size();++i){
+			for(int j = i;j < s.size();++j){
+				if(s[i] == s[j]) cnt++;
+			}
+		}
+		cout << cnt << endl;
 	}
-	cout << mp.size();
 }
