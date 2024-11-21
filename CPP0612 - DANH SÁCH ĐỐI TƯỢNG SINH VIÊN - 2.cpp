@@ -36,13 +36,13 @@ class SinhVien{
 	public:
 	string masv,ten,lop,ns;
 	float gpa;
-	friend istream &operator>>(istream &input,SinhVien &a){
+	friend istream &operator >> (istream &input,SinhVien &a){
 		cin.ignore();
 		getline(cin,a.ten);
 		cin >> a.lop >> a.ns >> a.gpa;
 		return input;
 	}
-	friend ostream &operator<<(ostream &output,SinhVien a){
+	friend ostream &operator << (ostream &output,SinhVien a){
 		if(ii < 10) a.masv = "B20DCCN00";
 		else a.masv = "B20DCCN0";
 		a.masv = a.masv + to_string(ii);

@@ -18,11 +18,11 @@ public:
         a = b = c = d = "";
         e = 0;
     }
-    friend istream& operator>>(istream&, SinhVien&);
-    friend ostream& operator<<(ostream&, SinhVien);
+    friend istream& operator >> (istream&, SinhVien&);
+    friend ostream& operator << (ostream&, SinhVien);
     friend void chuanhoa(SinhVien&);
 };
-istream& operator>>(istream& mycin, SinhVien& x) {
+istream& operator >> (istream& mycin, SinhVien& x) {
     coun++;
     x.a = "B20DCCN" + string(3 - to_string(coun).length(), '0') + to_string(coun);
     scanf(" %[^\n]", x.name_x);
@@ -44,7 +44,7 @@ istream& operator>>(istream& mycin, SinhVien& x) {
     return mycin;
 }
 
-ostream& operator<<(ostream& mycout, SinhVien x) {
+ostream& operator << (ostream& mycout, SinhVien x) {
     mycout << x.a << " " << x.b << " " << x.c << " " << x.d << " " << fixed << setprecision(2) << x.e << endl;
     return mycout;
 }
